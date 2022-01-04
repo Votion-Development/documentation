@@ -10,5 +10,5 @@ jobs:
         with:
           source-folder: docs
           git-user: JamieGrimwood
-          git-password: ${{ secrets.GITHUB_TOKEN }}
+          git-password: ${{ secrets.TOKEN }}
           deployment-branch: main
