@@ -9,4 +9,4 @@ Well done! You have successfully installed Dashactyl. You can now send our the l
 ## What's next?
 
 - [Join the discord](https://discord.gg/nDxrPWh8pk).
-- [Visit the main website](https://docusaurus.io/docs/styling-layout)
+- [Visit the main website](https://votion.dev/)
