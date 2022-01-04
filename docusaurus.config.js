@@ -8,13 +8,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Votion Development',
   tagline: 'This is the documentation for all Votion Development products.',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://docs.votion.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'Votion Development', // Usually your GitHub org/user name.
-  projectName: 'DOcumentation', // Usually your repo name.
+  projectName: 'documentation', // Usually your repo name.
 
   presets: [
     [
