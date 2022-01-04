@@ -148,7 +148,9 @@ location / {
       proxy_buffering off;
       proxy_set_header X-Real-IP $remote_addr;
   }
-}```
+}
+
+```
 
 
 Now you can restart NGINX and Dashactyk should be up and running on that domain with SSL!
