@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Votion Development Blog</title>
+        <link>https://docs.votion.dev/blog</link>
+        <description>Votion Development Blog</description>
+        <lastBuildDate>Wed, 22 Dec 2021 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Dashactyl 0.4 EOL]]></title>
+            <link>https://docs.votion.dev/blog/dashactyl-0.4-eol</link>
+            <guid>dashactyl-0.4-eol</guid>
+            <pubDate>Wed, 22 Dec 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[As of 22nd December 2021, Dashactyl 0.4 will be EOL (End Of Life). This is because it is now outdated software and has critical security flaws. It has developed many bypasses over its time and will no longer recieve security updates. Please do not try and ask for support in the discord as it will just be ignored and removed. If you continue to do so, moderators will take action. The Github repository has been set to Public Archive but will continue to stay in the orginisation and is not planned to be deleted.]]></description>
+            <content:encoded><![CDATA[<p>As of 22nd December 2021, Dashactyl 0.4 will be EOL (End Of Life). This is because it is now outdated software and has critical security flaws. It has developed many bypasses over its time and will no longer recieve security updates. Please do not try and ask for support in the discord as it will just be ignored and removed. If you continue to do so, moderators will take action. The Github repository has been set to Public Archive but will continue to stay in the orginisation and is not planned to be deleted.</p>]]></content:encoded>
+        </item>
+    </channel>
+</rss>
