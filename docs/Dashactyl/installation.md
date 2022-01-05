@@ -7,8 +7,8 @@ sidebar_position: 2
 ## Supported Operating Systems
 |    Name     |   Versions    |
 |-------------|---------------|
-|   Ubuntu    |    >=20.04    |
-|   Debian    |    >=11       |
+|   [Ubuntu](#ubuntu-and-debian)    |    >=20.04    |
+|   [Debian](#ubuntu-and-debian)    |    >=11       |
 |   Windows   |    >=10.x     |
 |   CentOS    |  Coming Soon  |
 
