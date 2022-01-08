@@ -9,7 +9,7 @@ sidebar_position: 2
 |-------------|---------------|
 |   [Ubuntu](#ubuntu-and-debian)    |    >=20.04    |
 |   [Debian](#ubuntu-and-debian)    |    >=11       |
-|   [Windows](##windows)   |    >=10.x     |
+|   [Windows](#windows)   |    >=10.x     |
 |   CentOS    |  Coming Soon  |
 
 Before you begin installation, make sure you have NodeJS v14 or above, git CLI, and Node Package Manager (NPM) v7.x or above installed.
