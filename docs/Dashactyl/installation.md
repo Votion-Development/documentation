@@ -8,7 +8,7 @@ sidebar_position: 2
 |    Name     |   Versions    |
 |-------------|---------------|
 |   [Ubuntu](#ubuntu-and-debian)    |    >=20.04    |
-|   [Debian](#ubuntu-and-debian)    |    >=11       |
+|   [Debian](#ubuntu-and-debian)    |    >=10       |
 |   [Windows](#windows)   |    >=10.x     |
 |   CentOS    |  Coming Soon  |
 
