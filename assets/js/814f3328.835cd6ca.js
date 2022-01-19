@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocumentation=self.webpackChunkdocumentation||[]).push([[535],{5641:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Music Man Rewrite","permalink":"/blog/music-man-rewrite"},{"title":"Dashactyl 0.4 EOL","permalink":"/blog/dashactyl-0.4-eol"}]}')}}]);

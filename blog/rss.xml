@@ -4,9 +4,17 @@
         <title>Votion Development Blog</title>
         <link>https://docs.votion.dev/blog</link>
         <description>Votion Development Blog</description>
-        <lastBuildDate>Wed, 22 Dec 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 19 Jan 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Music Man Rewrite]]></title>
+            <link>https://docs.votion.dev/blog/music-man-rewrite</link>
+            <guid>music-man-rewrite</guid>
+            <pubDate>Wed, 19 Jan 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[So I thought I would write a bit of a plan for the Music Man rewrite. It is currently made in discord.js v12 and uses message commands. Since discord upadted their API to slash commands and interactions, that is what it will now be using. It will use discord.js v13 with Sharding. Most of the commands have already been added and you can check on its progress with the bot "jamies testing bot". The bot uses lavalink to be able to stream music as it is very efficient and sounds very good. We plan to have a few music events with the bot aswell like on stages as kareoke nights or just coding and listening to music. If you do have any suggestions for events, ping me in the suggestions channel with it.]]></description>
+            <content:encoded><![CDATA[<p>So I thought I would write a bit of a plan for the Music Man rewrite. It is currently made in discord.js v12 and uses message commands. Since discord upadted their API to slash commands and interactions, that is what it will now be using. It will use discord.js v13 with Sharding. Most of the commands have already been added and you can check on its progress with the bot &quot;jamies testing bot&quot;. The bot uses lavalink to be able to stream music as it is very efficient and sounds very good. We plan to have a few music events with the bot aswell like on stages as kareoke nights or just coding and listening to music. If you do have any suggestions for events, ping me in the suggestions channel with it.</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Dashactyl 0.4 EOL]]></title>
             <link>https://docs.votion.dev/blog/dashactyl-0.4-eol</link>

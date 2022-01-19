@@ -2,11 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.votion.dev/blog</id>
     <title>Votion Development Blog</title>
-    <updated>2021-12-22T00:00:00.000Z</updated>
+    <updated>2022-01-19T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.votion.dev/blog"/>
     <subtitle>Votion Development Blog</subtitle>
     <icon>https://docs.votion.dev/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Music Man Rewrite]]></title>
+        <id>music-man-rewrite</id>
+        <link href="https://docs.votion.dev/blog/music-man-rewrite"/>
+        <updated>2022-01-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[So I thought I would write a bit of a plan for the Music Man rewrite. It is currently made in discord.js v12 and uses message commands. Since discord upadted their API to slash commands and interactions, that is what it will now be using. It will use discord.js v13 with Sharding. Most of the commands have already been added and you can check on its progress with the bot "jamies testing bot". The bot uses lavalink to be able to stream music as it is very efficient and sounds very good. We plan to have a few music events with the bot aswell like on stages as kareoke nights or just coding and listening to music. If you do have any suggestions for events, ping me in the suggestions channel with it.]]></summary>
+        <content type="html"><![CDATA[<p>So I thought I would write a bit of a plan for the Music Man rewrite. It is currently made in discord.js v12 and uses message commands. Since discord upadted their API to slash commands and interactions, that is what it will now be using. It will use discord.js v13 with Sharding. Most of the commands have already been added and you can check on its progress with the bot &quot;jamies testing bot&quot;. The bot uses lavalink to be able to stream music as it is very efficient and sounds very good. We plan to have a few music events with the bot aswell like on stages as kareoke nights or just coding and listening to music. If you do have any suggestions for events, ping me in the suggestions channel with it.</p>]]></content>
+        <author>
+            <name>Jamie</name>
+            <uri>https://github.com/JamieGrimwood</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Dashactyl 0.4 EOL]]></title>
         <id>dashactyl-0.4-eol</id>
