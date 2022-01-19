@@ -44,6 +44,16 @@ database:
   database: "dashactyl"
 ```
 
+You may get asked, how do I create a database? Well.. It's fairly simple, just run the commands below. Remember you can change the user name and/or the database name, but you'll need to set whatever you've set the user/database name to.
+```sql
+mysql -u root -p
+
+# After you've got that setup, let's go into the next step. Remember to change 'YourPasswordHere' with a secure password.
+CREATE USER 'dashboard'@'127.0.0.1' IDENTIFIED BY 'YourPasswordHere'; 
+CREATE DATABASE dashactyl;
+GRANT ALL PRIVILEGES ON dashactyl.* TO 'dashboard'@'127.0.0.1' WITH GRANT OPTION;
+quit;
+```
 (WIP) This section is for setting up the MySQL/MariaDB database for Dashactyl.
 
 ```yaml
