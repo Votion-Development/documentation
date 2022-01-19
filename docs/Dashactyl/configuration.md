@@ -44,7 +44,7 @@ database:
   database: "dashactyl"
 ```
 
-You may get asked, how do I create a database? Well.. It's fairly simple, just run the commands below. Remember you can change the user name and/or the database name, but you'll need to set whatever you've set the user/database name to.
+You may get asked, how do I create a database? Well.. It's fairly simple, just run the commands below. Remember you can change the username and/or the database name, but you'll need to set them on the settings.yml to whatever you've set the user/database name to.
 ```sql
 mysql -u root -p
 
