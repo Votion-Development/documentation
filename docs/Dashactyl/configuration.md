@@ -85,7 +85,13 @@ locations:
     renewal: true
 ```
 
-(WIP) This section is for the packages associated with user accounts.
+This section is for the location used for creating the servers on Pterodactyl.
+
+`"1"` is the location ID, you can find it on your Pterodactyl Panel, inside the admin area. `Locations -> Search your location, and you should see the ID on the left.`
+`name` is the location name that you want to show while creating a server on Dashactyl.
+`enabled` is pretty self-explanatory. It means if the location is enabled or not inside Dashactyl.
+`package` checks if a user has a package on his account. If the user doesn't have the specified package in Dashactyl, the user won't be able to create the server in that location. 
+
 
 ```yaml
 eggs:
@@ -111,7 +117,7 @@ eggs:
         backups: 1
 ```
 
-(WIP) This section is for the server configuration eggs in Pterodactyl. When creating a server through Dashactyl, the package associated with this egg will be used to create it.
+This section is for the server configuration eggs in Pterodactyl. When creating a server through Dashactyl, the package associated with this egg will be used to create it. You can set this to your liking, and/or remove the default egg to change it with another one.
 
 ```yaml
 packages:
@@ -177,9 +183,9 @@ renewal:
 (WIP)
 
 ## Setting Up Nginx
-The Nginx webserver will allow us to use a custom domain name and apply SSL to it.
+The Nginx web server will allow us to use a custom domain name and apply SSL to it.
 
-First, make sure you have Nginx and certbot installed:
+First, we need to make sure you have `Nginx` and `certbot` installed:
 ```bash
 sudo apt install nginx
 sudo apt install certbot
@@ -208,10 +214,11 @@ IMPORTANT NOTES:
    Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
    Donating to EFF:                    https://eff.org/donate-le
 ```
+If what you saw isn't similar to what you saw in your server, we recommend you ask for support on our [Discord Server](https://discord.gg/wwpRNvkMHA).
 
-Next you need to go to the nginx sites directory and create a configuration file:
+Next, if everything's going correctly, you need to go to the Nginx sites directory and create a configuration file:
 ```bash
-cd /etc/nginx/sites-enabled
+cd /etc/nginx/sites-available
 nano dashactyl.conf
 ```
 
@@ -240,5 +247,9 @@ server {
   }
 }
 ```
+After we've setup the main config file, we'll need to symlink it to sites-enabled:
+```bash
+sudo ln -s /etc/nginx/sites-available/dashactyl.conf /etc/nginx/sites-enabled/dashactyl.conf
+```
 
-Once you have edited and saved your configuration file, restart Nginx with `systemctl restart nginx` and restart Dashactyl. You should see it running on that domain with SSL!
+Once you have edited, saved, and symlinked your configuration file, restart Nginx with `systemctl restart nginx` and restart Dashactyl. You should see it running on that domain with SSL!
