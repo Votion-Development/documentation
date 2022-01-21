@@ -54,6 +54,7 @@ CREATE DATABASE dashactyl;
 GRANT ALL PRIVILEGES ON dashactyl.* TO 'dashboard'@'127.0.0.1' WITH GRANT OPTION;
 quit;
 ```
+This section is for setting up the MySQL/MariaDB database for Dashactyl.
 
 ```yaml
 api:
