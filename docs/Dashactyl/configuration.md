@@ -54,7 +54,6 @@ CREATE DATABASE dashactyl;
 GRANT ALL PRIVILEGES ON dashactyl.* TO 'dashboard'@'127.0.0.1' WITH GRANT OPTION;
 quit;
 ```
-(WIP) This section is for setting up the MySQL/MariaDB database for Dashactyl.
 
 ```yaml
 api:
@@ -179,6 +178,7 @@ renewal:
 
   renew_fee: 10
 ```
+This section is for the AFK page and the server renewal. More information is provided below.
 
 (WIP)
 
