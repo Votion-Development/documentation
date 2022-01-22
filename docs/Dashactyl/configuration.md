@@ -54,7 +54,7 @@ CREATE DATABASE dashactyl;
 GRANT ALL PRIVILEGES ON dashactyl.* TO 'dashboard'@'127.0.0.1' WITH GRANT OPTION;
 quit;
 ```
-(WIP) This section is for setting up the MySQL/MariaDB database for Dashactyl.
+This section is for setting up the MySQL/MariaDB database for Dashactyl.
 
 ```yaml
 api:
@@ -179,8 +179,19 @@ renewal:
 
   renew_fee: 10
 ```
+This section is for the AFK page and the server renewal. More information is provided below.
 
-(WIP)
+AFK page:
+
+`domain_lock` (WIP)
+`redirect_on_attempt_to_steal_code` (WIP)
+`everywhat` means how much time must go by before a user is able to get a coin inside the AFK page. The time is in seconds.
+`gaincoins` this means how many coins will the user gain after the time you specified goes by. The time is in seconds.
+
+Renewal:
+`renewal_time` this is the time that specifies when the server must be renewed.
+`deletion_time` deletion time is the time that is given to the user to renew the server after it gets suspended. If the user doesn't renew the server on the specified time after it gets suspended, the server will be deleted. The time is in seconds.
+`renew_fee` is the renew fee users will need to use when renewing a server, also known as using coins. The time is in seconds.
 
 ## Setting Up Nginx
 The Nginx web server will allow us to use a custom domain name and apply SSL to it.
