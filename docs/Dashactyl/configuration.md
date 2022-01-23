@@ -27,6 +27,37 @@ discord:
 The start of the settings file; The `port` is where Dashactyl will be running. Your Discord credentials can be found [at the developer portal](https://discord.com/developers/applications) with the application you are using for Dashactyl. When setting up the `callbackpath`, make sure it is also whitelisted in the portal: __Your Application > Oauth2 > Redirects__. The `token` is the token of your bot application for Dashactyl. This must be kept secret __at all times__ as it can be easily abused. The `guild` is your server ID if applicable. This is optional and is used to add clients to your server when logging into the dashboard.
 
 ```yaml
+auditlogs:
+  enabled: false
+  webhook_url: "Enter your webhook URL"
+```
+
+This section is for configuring audit logs in Dashactyl. 
+`enabled` will determine if you want to activate this system or not, to activate it you must leave it in `true`, to deactivate it in `false`. `webhook_url` is the URL of your webhook, in this case you must put the URL of the webhook created on your Discord server.
+
+```yaml
+email_system:
+  enabled: false
+  smtp_host: "Enter your SMTP Host"
+  smtp_port: "Enter your SMTP Port"
+  smtp_user: "Enter your SMTP User"
+  smtp_password: "Enter your SMTP Password"
+  extra:
+    dashboardurl: "Enter your dashboard url with https"
+    dashboardname: "Dashactyl" 
+```
+
+This section is for the configuration of the email system, better known as SMTP in Dashactyl.
+For this to work you will need to have an SMTP host like Mailjet.
+`enabled` will determine if you want to activate this system or not, to activate it you must leave it in `true`, to deactivate it in `false`.
+`smtp_host` will determine the host you are using, example: smtp.zoho.com or smtp.gmail.com
+`smtp_port` will determine the port your host uses, in some cases it can be `25`, `465`, etc.
+`smtp_user` is the user provided by your SMTP host, in some cases it can be your email.
+`smtp_password` It is the password that gives you to connect through the previously configured user, in some cases it is the password of your email placed in `smtp_user`.
+`dashboardurl` is the URL of your Dashactyl instance, for example: `https://client.mydomain.com`.
+`dashboardname` is the name of your host or dashboard, by default this will be Dashactyl.
+
+```yaml
 pterodactyl:
   domain: "Enter your Pterodactyl Panel domain here."
   key: "Enter your Pterodactyl Panel application API key here."
@@ -263,4 +294,4 @@ After we've setup the main config file, we'll need to symlink it to sites-enable
 sudo ln -s /etc/nginx/sites-available/dashactyl.conf /etc/nginx/sites-enabled/dashactyl.conf
 ```
 
-Once you have edited, saved, and symlinked your configuration file, restart Nginx with `systemctl restart nginx` and restart Dashactyl. You should see it running on that domain with SSL!
+  Once you have edited, saved, and symlinked your configuration file, restart Nginx with `systemctl restart nginx` and restart Dashactyl. You should see it running on that domain with SSL!
