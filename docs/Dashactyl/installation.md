@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Installation
 
-:::warning READ BEFORE CONTINUING!
+:::warning READ BEFORE PROCEEDING!
 We've spent hours making this documentation. You're supposed to at least have basic linux knowledge, and you're also supposed to understand what commands you're running.
 :::
 
