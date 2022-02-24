@@ -10,14 +10,14 @@ Because the `settings.yml` file is so large, this page will break down and expla
 
 ```yaml
 website:
-  port: 8000
+  port: 4440
   secret: 'Enter your session password here.'
   secure: false
 
 discord:
   id: "Enter your Discord OAuth2 ID here."
   secret: "Enter your Discord OAuth2 secret here."
-  callbackpath: "http://localhost:8000/accounts/callback"
+  callbackpath: "http://localhost:4440/accounts/callback"
   prompt: false 
 
   token: "Insert your bot token here."
@@ -198,7 +198,7 @@ This section is for the Dashactyl store configuration. `enabled` is whether the 
 ```yaml
 afk:
   domain_lock: 
-    - localhost:8000
+    - localhost:4440
   redirect_on_attempt_to_steal_code: https://www.youtube.com/watch?v=dQw4w9WgXcQ
 
   everywhat: 60
