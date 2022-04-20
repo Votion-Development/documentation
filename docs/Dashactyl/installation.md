@@ -27,12 +27,14 @@ sudo apt update && sudo apt upgrade
 # installing git CLI
 sudo apt install git
 
-# installing NPM
-sudo apt install npm
-
-# installing NodeJS
+# installing NodeJS & NPM on Ubuntu
 curl -fsSL https://deb.nodesource.com/setup_14.x | sudo bash -
-sudo apt install nodejs
+sudo apt install -y nodejs
+
+# installing NodeJS & NPM on Debian, as root
+curl -fsSL https://deb.nodesource.com/setup_14.x | bash -
+apt install -y nodejs
+
 ```
 
 You can check the versions with the following commands:
