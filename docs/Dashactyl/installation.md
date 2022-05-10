@@ -27,6 +27,9 @@ sudo apt update && sudo apt upgrade
 # installing git CLI
 sudo apt install git
 
+# installing MySql
+sudo apt install mariadb-server
+
 # installing NPM
 sudo apt install npm
 
