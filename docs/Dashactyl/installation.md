@@ -16,6 +16,10 @@ We've spent hours making this documentation. You're supposed to at least have ba
 |   [Windows](#windows)   |    >=10.x     |
 |   CentOS    |  Coming Soon  |
 
+Suggested VPS hosting: [ColourNodes](https://colournodes.com)
+
+![colournodes image](/img/colournodes.gif)
+
 Before you begin installation, make sure you have NodeJS v14 or above, git CLI, and Node Package Manager (NPM) v7.x or above installed.
 
 ## Ubuntu and Debian
