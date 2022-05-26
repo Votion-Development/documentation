@@ -302,3 +302,14 @@ sudo ln -s /etc/nginx/sites-available/dashactyl.conf /etc/nginx/sites-enabled/da
 ```
 
   Once you have edited, saved, and symlinked your configuration file, restart Nginx with `systemctl restart nginx` and restart Dashactyl. You should see it running on that domain with SSL!
+  
+## Starting Dashactyl
+
+First we need to install pm2:
+```
+npm install pm2 -g
+```
+Now you need to go to the dashboard directory and use:
+```
+pm2 start index.js
+```
