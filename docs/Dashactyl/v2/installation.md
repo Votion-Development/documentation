@@ -54,10 +54,12 @@ npm -v
 node -v
 ```
 
-Now to install Dashactyl and its dependencies:
+Now to install Dashactyl, its dependencies & build the frontend:
 ```bash
 git clone https://github.com/Votion-Development/Dashactyl-v2.git
 cd Dashactyl && npm install
+
+cd frontend && yarn build
 ```
 
 After installing Dashactyl, create the `webconfig.yml` file using the `webconfig-example.yml` file and edit it for your dashboard.
