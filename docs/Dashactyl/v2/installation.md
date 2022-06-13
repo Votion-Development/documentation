@@ -90,7 +90,3 @@ After installing Dashactyl, create the `webconfig.yml` file using the `webconfig
 type webconfig-example.yml > webconfig.yml
 start webconfig.yml
 ```
-
----
-
-Once you have configured your `webconfig.yml` file you can run Dashactyl with `node .` or an external module such as PM2.
