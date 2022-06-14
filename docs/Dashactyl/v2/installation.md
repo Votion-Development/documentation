@@ -13,7 +13,7 @@ We've spent hours making this documentation. You're supposed to at least have ba
 |-------------|---------------|
 |   [Ubuntu](#ubuntu-and-debian)    |    >=20.04    |
 |   [Debian](#ubuntu-and-debian)    |    >=10       |
-|   [Windows](#windows)   |    >=10.x     |
+|   [Windows](#windows)   |    >=10       |
 |   CentOS    |  Coming Soon  |
 
 Suggested VPS hosting: [ColourNodes](https://colournodes.com)
@@ -59,7 +59,7 @@ Now to install Dashactyl, its dependencies & build the frontend:
 git clone https://github.com/Votion-Development/Dashactyl-v2.git
 cd Dashactyl-v2 && npm install
 
-cd frontend && yarn build
+cd frontend && npm i && npm run build
 ```
 
 After installing Dashactyl, create the `webconfig.yml` file using the `webconfig-example.yml` file and edit it for your dashboard.
@@ -81,10 +81,12 @@ npm -v
 node -v
 ```
 
-Now to install Dashactyl and its dependencies:
-```bat
+Now to install Dashactyl, its dependencies & build the frontend:
+```bash
 git clone https://github.com/Votion-Development/Dashactyl-v2.git
 cd Dashactyl-v2 && npm install
+
+cd frontend && npm i && npm run build
 ```
 
 After installing Dashactyl, create the `webconfig.yml` file using the `webconfig-example.yml` file and edit it for your dashboard.
