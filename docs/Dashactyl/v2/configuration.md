@@ -21,7 +21,7 @@ connection_uri:
 database: Dashactyl-v2
 ```
 
-The start of the settings file; The `port` is where Dashactyl will be running. `ssl` is dependant on wether you run dashactyl with SSL or not. This has been known to cause issues however if enabled with ssl, so it is recomended to keep it as false. The `secret` is a randomly genererated password that you must keep secret as it it is what the dashboards sessions are encrypted with. `environment` and `debug` are only for developers, so you don't need to worry about them. `dashboard_url` is the URL of your dashboard. This MUST be correct otherwise the frontend will not be able to send requests to the backend. This is because this setting sets the cors origin policy. `connection_uri` is the URI for your mongodb database.
+The start of the settings file; The `port` is where Dashactyl will be running. `ssl` is dependant on wether you run dashactyl with SSL or not. This has been known to cause issues however if enabled with ssl, so it is recomended to keep it as false. The `secret` is a randomly genererated password that you must keep secret as it it is what the dashboards sessions are encrypted with. `environment` and `debug` are only for developers, so you don't need to worry about them. `dashboard_url` is the URL of your dashboard (Dashboard as in Dashactyl. Not Pterodactyl.) This MUST be correct otherwise the frontend will not be able to send requests to the backend. This is because this setting sets the cors origin policy. `connection_uri` is the URI for your mongodb database.
 
 You may ask how do I create a database? Well.. It's fairly simple, just follow the steps below. Remember, you can change the database name to whatever you would like, however you just need to change it in the webconfig.yml file.
 
