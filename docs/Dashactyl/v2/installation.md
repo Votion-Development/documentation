@@ -64,7 +64,7 @@ cd frontend && npm i && npm run build
 
 After installing Dashactyl, create the `webconfig.yml` file using the `webconfig-example.yml` file and edit it for your dashboard.
 ```bash
-mv webconfig-example.yml webconfig.yml
+cd .. && mv webconfig-example.yml webconfig.yml
 nano webconfig.yml
 ```
 
