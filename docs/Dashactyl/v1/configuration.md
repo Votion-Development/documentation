@@ -268,31 +268,44 @@ Now paste the following into the file. Make sure to replace `<DOMAIN>` and `<POR
 ```conf
 server {
   listen 80;
-  server_name <DOMAIN>;
+  server_name <URL>;
   return 301 https://$server_name$request_uri;
 }
 server {
   listen 443 ssl http2;
 
-  server_name <DOMAIN>;
-  ssl_certificate /etc/letsencrypt/live/<DOMAIN>/fullchain.pem;
-  ssl_certificate_key /etc/letsencrypt/live/<DOMAIN>/privkey.pem;
-  ssl_session_cache shared:SSL:10m;
-  ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;
-  ssl_ciphers  HIGH:!aNULL:!MD5;
-  ssl_prefer_server_ciphers on;
-
-  location / {
-    proxy_pass http://localhost:<PORT>/;
-    proxy_buffering off;
-    proxy_set_header X-Real-IP $remote_addr;
-  }
-  
-  location /afkwspath {
+  location /afkwspath/ {
+    proxy_pass "http://localhost:<PORT>/afkwspath";
+    proxy_read_timeout     60;
+    proxy_connect_timeout  60;
+    proxy_redirect         off;
     proxy_http_version 1.1;
     proxy_set_header Upgrade $http_upgrade;
-    proxy_set_header Connection "upgrade";
-    proxy_pass "http://localhost:<PORT>/afkwspath";
+    proxy_set_header Connection 'upgrade';
+    proxy_set_header Host $host;
+    proxy_cache_bypass $http_upgrade;
+  }
+
+    server_name <URL>;
+    ssl_certificate /etc/letsencrypt/live/<URL>/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/<URL>/privkey.pem;
+    ssl_session_cache shared:SSL:10m;
+    ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers  HIGH:!aNULL:!MD5;
+    ssl_prefer_server_ciphers on;
+
+    location / {
+      proxy_pass http://localhost:<PORT>/;
+      proxy_buffering off;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_read_timeout     60;
+      proxy_connect_timeout  60;
+      proxy_redirect         off;
+      proxy_http_version 1.1;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection 'upgrade';
+      proxy_set_header Host $host;
+      proxy_cache_bypass $http_upgrade;
   }
 }
 ```
