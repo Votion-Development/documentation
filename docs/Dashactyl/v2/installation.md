@@ -47,6 +47,21 @@ sudo apt-get update
 
 sudo apt-get install -y mongodb-org
 
+# starting MongoDB
+
+systemctl start mongod && systemctl enable mongod
+
+# creating MongoDB root user
+
+use admin
+db.createUser(
+      {
+          user: "root",
+          pwd: "passwordhere",
+          roles: [ "root" ]
+      }
+)
+
 # installing NPM
 sudo apt install npm
 
