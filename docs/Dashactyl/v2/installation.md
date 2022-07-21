@@ -51,6 +51,10 @@ sudo apt-get install -y mongodb-org
 
 systemctl start mongod && systemctl enable mongod
 
+# login to mongodb shell
+
+mongosh
+
 # creating MongoDB root user
 
 use admin
