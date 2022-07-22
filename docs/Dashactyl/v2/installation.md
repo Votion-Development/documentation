@@ -74,6 +74,28 @@ curl -fsSL https://deb.nodesource.com/setup_14.x | sudo bash -
 sudo apt install nodejs
 ```
 
+Now, we are going to enable Authentication on your MongoDB database and make it accessible outside your VPS so you can use MongoDB compass with it. This is however optional if you would rather not to expose your Database to the world. This is only recomended for setup and development purposes.
+
+```bash
+nano /etc/mongod.conf
+```
+
+Now, we are going to replace this:
+
+![127.0.0.1](/img/mongodb_net_127.0.0.1.png)
+
+With this:
+
+![0.0.0.0](/img/mongodb_net_0.0.0.0.png)
+
+And if you scroll down and find security:
+
+![security](/img/mongodb_security.png)
+
+Uncomment it and turn it into this:
+
+![security](/img/mongodb_security_enabled.png)
+
 You can check the versions with the following commands:
 ```bash
 git --version
