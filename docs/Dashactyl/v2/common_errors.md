@@ -18,4 +18,10 @@ This error sometimes appears when you try and install the NPM packages. A workar
 If you are getting the error: `MongoClient must be connected`, a simple workaround is by using the non srv connection uri which you can get by choosing an older driver version like `2.2.12` on MongoDB Atlas, or just converting it yourself.
 
 
-Thank you to Acktar#6724 on discord for these answers.
+Thank you to Acktar#6724 on discord for the above 2 answers.
+
+## Invalid oauth2 redirect_uri
+
+The reason you are getting `invalid oauth2 redirect_uri` is because you haven't set the `application_url` key in the settings collection in the database, or it is not set correctly. It MUST be set like the following below. __Make sure there is not a trailing `/` at the end!__
+
+![application_url](/img/application_url.png)
