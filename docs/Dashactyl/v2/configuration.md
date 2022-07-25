@@ -94,13 +94,6 @@ server {
     proxy_buffering off;
     proxy_set_header X-Real-IP $remote_addr;
   }
-  
-  location /afkwspath {
-    proxy_http_version 1.1;
-    proxy_set_header Upgrade $http_upgrade;
-    proxy_set_header Connection "upgrade";
-    proxy_pass "http://localhost:<PORT>/afkwspath";
-  }
 }
 ```
 After we've setup the main config file, we'll need to symlink it to sites-enabled:
