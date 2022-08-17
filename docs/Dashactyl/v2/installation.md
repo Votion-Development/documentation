@@ -70,7 +70,7 @@ db.createUser(
 sudo apt install npm
 
 # installing NodeJS
-curl -fsSL https://deb.nodesource.com/setup_14.x | sudo bash -
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo bash -
 sudo apt install nodejs
 ```
 
