@@ -105,7 +105,7 @@ node -v
 
 Now to install Dashactyl, its dependencies & build the frontend:
 ```bash
-git clone https://github.com/Votion-Development/Dashactyl.git
+git clone https://github.com/Votion-Development/Dashactyl.git --branch stable
 cd Dashactyl && npm install
 
 cd frontend && npm i && npm run build
@@ -132,7 +132,7 @@ node -v
 
 Now to install Dashactyl, its dependencies & build the frontend:
 ```bash
-git clone https://github.com/Votion-Development/Dashactyl.git
+git clone https://github.com/Votion-Development/Dashactyl.git --branch stable
 cd Dashactyl && npm install
 
 cd frontend && npm i && npm run build
