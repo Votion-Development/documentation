@@ -16,9 +16,9 @@ We've spent hours making this documentation. You're supposed to at least have ba
 |   [Windows](#windows)   |    >=10       |
 |   CentOS    |  Coming Soon  |
 
-Suggested VPS hosting: [ColourNodes](https://colournodes.com)
+Suggested VPS hosting: [Falcon Hosting](https://falconhosting.co.uk)
 
-![colournodes image](/img/colournodes.gif)
+![falconhosting image](/img/falconhosting.gif)
 
 Before you begin installation, make sure you have NodeJS v14 or above, git CLI, and Node Package Manager (NPM) v7.x or above installed.
 
