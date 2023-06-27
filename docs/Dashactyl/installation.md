@@ -11,7 +11,7 @@ We've spent hours making this documentation. You're supposed to at least have ba
 ## Supported Operating Systems
 |    Name     |   Versions    |
 |-------------|---------------|
-|   [Ubuntu](#ubuntu-and-debian)    |    >=20.04    |
+|   [Ubuntu](#ubuntu-and-debian)    |    >=22.04    |
 |   [Debian](#ubuntu-and-debian)    |    >=10       |
 |   [Windows](#windows)   |    >=10       |
 |   CentOS    |  Coming Soon  |
