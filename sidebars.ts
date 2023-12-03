@@ -45,7 +45,6 @@ const sidebars: SidebarsConfig = {
           ]
         },
         'dashactyl/configuration_reference',
-        'dashactyl/congratulations',
         'dashactyl/common_errors',
       ],
     },
