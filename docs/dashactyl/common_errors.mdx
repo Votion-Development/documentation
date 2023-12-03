@@ -7,7 +7,7 @@ sidebar_position: 5
 This is a list of common errors you might come across when using Dashactyl.
 
 
-## Arch Error:
+## Arch Error
 
 ![arch_error](/img/arch_error.png)
 
@@ -24,6 +24,6 @@ Thank you to Acktar#6724 on discord for the above 2 answers.
 
 The reason you are getting `invalid oauth2 redirect_uri` is because you haven't set the `application_url` key in the settings collection in the database, or it is not set correctly. It MUST be set like the following below. __Make sure there is not a trailing `/` at the end!__
 
-```json
-"application_url": "http://panel.example.com"
+```yaml
+application_url: "http://panel.example.com"
 ```

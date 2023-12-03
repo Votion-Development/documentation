@@ -24,22 +24,22 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           label: 'Webserver',
           items: [
+            'dashactyl/webserver/nginx',
             'dashactyl/webserver/caddy',
-            'dashactyl/webserver/nginx'
           ]
         },
         'dashactyl/congratulations',
         'dashactyl/common_errors',
-      ]
+      ],
     },
     {
       type: 'category',
       label: 'Music Man',
       items: [
         'music_man/introduction',
-        'music_man/commands'
+        'music_man/commands',
       ],
-    }
+    },
   ],
 
   // But you can create a sidebar manually

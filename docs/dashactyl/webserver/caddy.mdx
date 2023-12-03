@@ -19,7 +19,7 @@ import TabItem from '@theme/TabItem';
 		sudo apt install caddy
 		```
 	</TabItem>
-	<TabItem value="rhel-8" label="RHEL 8">
+	<TabItem value="rhel-8-9" label="RHEL 8/9">
 		```bash
 		sudo dnf install 'dnf-command(copr)'
 		sudo dnf copr enable @caddy/caddy
@@ -41,7 +41,7 @@ Caddy has a configuration file called a "Caddyfile", which is typlically stored 
 
 Here is an example configuration using some globals and reverse proxying.
 
-``` title="/etc/caddy/Caddyfile"
+```conf title="/etc/caddy/Caddyfile"
 (globals) {
 
     header {
@@ -62,7 +62,7 @@ Here is an example configuration using some globals and reverse proxying.
 
 }
 
-<DOMAIN> {
+<DASHACTYL_DOMAIN> {
 
 	import globals
 
