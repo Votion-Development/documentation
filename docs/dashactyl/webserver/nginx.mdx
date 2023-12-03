@@ -53,7 +53,7 @@ If everything goes correctly, you should be told that the certificate is being s
 	<TabItem value="ubuntu-debian" label="Ubuntu/Debian" default>
 		You will want to create a new configuration file within the `/etc/nginx/sites-available` directory, this example names the config file `dashactyl.conf`
 
-		```conf title="/etc/nginx/sites-available/dashactyl.conf"
+		```nginx title="/etc/nginx/sites-available/dashactyl.conf"
 		server {
 			listen 80;
 			server_name <DOMAIN>
@@ -98,7 +98,7 @@ If everything goes correctly, you should be told that the certificate is being s
 	<TabItem value="rhel-7-8-9" label="RHEL 7/8/9">
 		You will want to create a new configuration file within the `/etc/nginx/conf.d` directory, this example names the config file `dashactyl.conf`
 
-		```conf title="/etc/nginx/conf.d/dashactyl.conf"
+		```nginx title="/etc/nginx/conf.d/dashactyl.conf"
 		server {
 			listen 80;
 			server_name <DOMAIN>

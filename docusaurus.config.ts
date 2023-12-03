@@ -116,8 +116,8 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} Votion Development, Inc. Built with Docusaurus.`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismThemes.oceanicNext,
+      additionalLanguages: ['nginx']
     },
   } satisfies Preset.ThemeConfig,
 };
