@@ -25,7 +25,7 @@ The start of the settings file; The `port` is where Dashactyl will be running. `
 
 You may ask how do I create a database? Well.. It's fairly simple, just follow the steps below. Remember, you can change the database name to whatever you would like, however you just need to change it in the webconfig.yml file.
 
-![create database](/img/create_database.png)
+{/* ![create database](/img/create_database.png) */}
 
 Once you have created the database, you just need to start the application, **(MAKE SURE THE CONNECTION URI AND DATABASE IS CORRECT IN THE WEBCONFIG.YML FILE)**
 
@@ -33,6 +33,14 @@ Dashactyl will automatically create the necessary collections for you, and inser
 
 ## Setting Up Nginx
 The Nginx web server will allow us to use a custom domain name and apply SSL to it.
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+	<TabItem value="ubuntu-debian" label="Ubuntu/Debian" default>
+	</TabItem>
+</Tabs>
 
 First, we need to make sure you have `Nginx` and `certbot` installed:
 ```bash
