@@ -1,0 +1,20 @@
+---
+sidebar_position: 1
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Installing & Setting up Nginx
+
+
+## Installing Nginx
+<Tabs>
+	<TabItem value="ubuntu-debian" label="Ubuntu/Debian" default>
+		```bash
+		sudo apt install nginx python3-certbot-nginx certbot
+		sudo systemctl start nginx
+		sudo certbot certonly --nginx -d <DASHACTYL_DOMAIN>
+		```
+	</TabItem>
+</Tabs>
