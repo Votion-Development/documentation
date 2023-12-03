@@ -20,17 +20,6 @@ function HomepageHeader(): JSX.Element {
             Documentation
           </Link>
         </div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
       </div>
     </header>
   );

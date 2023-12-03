@@ -19,6 +19,14 @@ const sidebars: SidebarsConfig = {
       label: 'Dashactyl',
       items: [
         'dashactyl/introduction',
+        {
+          type: 'category',
+          label: 'Installation',
+          items: [
+            'dashactyl/installation/standalone',
+            'dashactyl/installation/pterodactyl'
+          ],
+        },
         'dashactyl/configuration',
         {
           type: 'category',
@@ -28,6 +36,7 @@ const sidebars: SidebarsConfig = {
             'dashactyl/webserver/caddy',
           ]
         },
+        'dashactyl/configuration_guide',
         'dashactyl/congratulations',
         'dashactyl/common_errors',
       ],

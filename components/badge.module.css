@@ -1,0 +1,22 @@
+.badge {
+	font-family: monospace;
+	padding: 2px;
+	border-radius: 5px;
+	border: 1px solid;
+	width: fit-content;
+}
+
+.badge-info {
+	background-color: var(--ifm-color-info-contrast-background);
+	border-color: var(--ifm-color-info-dark);
+}
+
+.badge-danger {
+	background-color: var(--ifm-color-danger-contrast-background);
+	border-color: var(--ifm-color-danger-dark);
+}
+
+.badge-warning {
+	background-color: var(--ifm-color-warning-contrast-background);
+	border-color: var(--ifm-color-warning-dark);
+}

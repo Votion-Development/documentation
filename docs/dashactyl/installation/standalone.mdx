@@ -1,0 +1,33 @@
+
+# Standalone Installation
+
+:::warning
+Please make sure you have setup both your webserver and database
+
+Guides can be found below:
+- [Webserver Install - NGINX](../webserver/nginx)
+- [Webserver Install - Caddy](../webserver/caddy)
+:::
+
+## Installing NVM
+
+First, we'll want to install NVM (Node Version Manager) to help us install and manage NodeJS versions.
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+source ~/.bashrc
+```
+
+## Installing NodeJS & Yarn
+
+To install the latest LTS version of NodeJS, you can do the following:
+
+```bash
+nvm install --lts --default --latest-npm
+```
+
+To install Yarn:
+
+```bash
+npm i -g yarn
+```
