@@ -23,11 +23,19 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           label: 'Installation',
           items: [
-            'dashactyl/installation/standalone',
+            'dashactyl/installation/manual',
             'dashactyl/installation/pterodactyl'
           ],
         },
-        'dashactyl/configuration',
+        {
+          type: 'category',
+          label: 'Database Setup',
+          items: [
+            'dashactyl/database/setup_debian',
+            'dashactyl/database/setup_ubuntu',
+            'dashactyl/database/setup_rhel',
+          ],
+        },
         {
           type: 'category',
           label: 'Webserver',
@@ -36,7 +44,7 @@ const sidebars: SidebarsConfig = {
             'dashactyl/webserver/caddy',
           ]
         },
-        'dashactyl/configuration_guide',
+        'dashactyl/configuration_reference',
         'dashactyl/congratulations',
         'dashactyl/common_errors',
       ],
