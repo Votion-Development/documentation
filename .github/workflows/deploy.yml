@@ -62,9 +62,7 @@ jobs:
         working-directory: ${{ env.BUILD_PATH }}
       - name: Build
         run: |
-          ${{ steps.detect-package-manager.outputs.runner }} build \
-            --site "${{ steps.pages.outputs.origin }}" \
-            --base "${{ steps.pages.outputs.base_path }}"
+          ${{ steps.detect-package-manager.outputs.runner }} build
         working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
