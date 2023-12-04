@@ -60,7 +60,7 @@ const config: Config = {
     navbar: {
       title: 'Votion Development',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Votion Logo',
         src: 'img/logo.svg',
       },
       items: [

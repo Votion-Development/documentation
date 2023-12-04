@@ -1,8 +1,48 @@
 # Ubuntu 22.04/20.04
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 :::warning
 It is expected that you have basic Linux knowledge before moving ahead.
 :::
+
+This guide is based off of the MongoDB install guide. If you have the `mongodb` package already installed, you can move on to the configuration, as the `mongodb-org` package will cause conflicts.
+
+## Preparation
+
+### Install Dependencies
+
+Install `gnupg`, `curl`, if you already have them both installed, you can skip this step.
+
+```bash
+sudo apt install gnupg curl
+```
+
+### Import GPG Key
+
+```bash
+curl -fsSL https://pgp.mongodb.com/server-5.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-5.0.gpg \
+   --dearmor
+```
+
+### Create List File
+
+Create a .list file with the following command:
+
+<Tabs>
+	<TabItem value="ubuntu-jammy" label="Ubuntu 22.04 (Jammy)">
+		```bash
+		echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-5.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+		```
+	</TabItem>
+	<TabItem value="ubuntu-focal" label="Ubuntu 20.04 (Focal)">
+		```bash
+		echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-5.0.gpg ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+		```
+	</TabItem>
+</Tabs>
 
 :::note
 To-Do
