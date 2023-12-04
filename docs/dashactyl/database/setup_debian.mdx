@@ -1,9 +1,47 @@
-# Debian
+# Debian Install
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 :::warning
 It is expected that you have basic Linux knowledge before moving ahead.
 :::
 
-:::note
-To-Do
-:::
+This guide is based off of the MongoDB install guide. If you have the `mongodb` package already installed, you can move on to the configuration, as the `mongodb-org` package will cause conflicts.
+
+## Preparation
+
+### Install Dependencies
+
+Install `gnupg`, `curl`, if you already have them both installed, you can skip this step.
+
+```bash
+sudo apt install gnupg curl
+```
+
+### Import GPG Key
+
+```bash
+curl -fsSL https://pgp.mongodb.com/server-5.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-5.0.gpg \
+   --dearmor
+```
+
+### Create List File
+
+Create a .list file with the following command:
+
+```bash
+echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-5.0.gpg ] http://repo.mongodb.org/apt/debian bullseye/mongodb-org/5.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+```
+
+## Install MongoDB
+
+Now, all you need to do is update & install:
+
+```bash
+sudo apt update
+sudo apt install mongodb-org
+```
+
+**See: [MongoDB Configuration](./configuration)**

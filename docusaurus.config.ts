@@ -117,7 +117,7 @@ const config: Config = {
     },
     prism: {
       theme: prismThemes.oceanicNext,
-      additionalLanguages: ['nginx']
+      additionalLanguages: ['nginx', 'toml']
     },
   } satisfies Preset.ThemeConfig,
 };

@@ -34,6 +34,7 @@ const sidebars: SidebarsConfig = {
             'dashactyl/database/setup_debian',
             'dashactyl/database/setup_ubuntu',
             'dashactyl/database/setup_rhel',
+            'dashactyl/database/configuration',
           ],
         },
         {

@@ -1,9 +1,68 @@
-# RHEL 7/8/9
+# RHEL 7/8/9 Install
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 :::warning
 It is expected that you have basic Linux knowledge before moving ahead.
 :::
 
-:::note
-To-Do
-:::
+This guide is based off of the MongoDB install guide. If you have the `mongodb` package already installed, you can move on to the configuration, as the `mongodb-org` package will cause conflicts.
+
+## Preparation
+
+### Create Repo File
+
+Make the following repo according to your RHEL major version at `/etc/yum.repos.d/mongodb-org-5.0.repo`
+
+<Tabs>
+	<TabItem value="rhel-9" label="RHEL 9" default>
+		```toml title="/etc/yum.repos.d/mongodb-org-5.0.repo"
+		[mongodb-org-5.0]
+		name=MongoDB Repository
+		baseurl=https://repo.mongodb.org/yum/redhat/9/mongodb-org/5.0/x86_64/
+		gpgcheck=1
+		enabled=1
+		gpgkey=https://www.mongodb.org/static/pgp/server-5.0.asc
+		```
+	</TabItem>
+	<TabItem value="rhel-8" label="RHEL 8">
+		```toml title="/etc/yum.repos.d/mongodb-org-5.0.repo"
+		[mongodb-org-5.0]
+		name=MongoDB Repository
+		baseurl=https://repo.mongodb.org/yum/redhat/8/mongodb-org/5.0/x86_64/
+		gpgcheck=1
+		enabled=1
+		gpgkey=https://www.mongodb.org/static/pgp/server-5.0.asc
+		```
+	</TabItem>
+	<TabItem value="rhel-7" label="RHEL 7">
+		```toml title="/etc/yum.repos.d/mongodb-org-5.0.repo"
+		[mongodb-org-5.0]
+		name=MongoDB Repository
+		baseurl=https://repo.mongodb.org/yum/redhat/7/mongodb-org/5.0/x86_64/
+		gpgcheck=1
+		enabled=1
+		gpgkey=https://www.mongodb.org/static/pgp/server-5.0.asc
+		```
+	</TabItem>
+</Tabs>
+
+## Install MongoDB
+
+Now, all you need to do is install `mongodb-org`
+
+<Tabs>
+	<TabItem value="rhel-8-9" label="RHEL 8/9" default>
+	```bash
+	sudo dnf install mongodb-org
+	```
+	</TabItem>
+	<TabItem value="rhel-7" label="RHEL 7">
+	```bash
+	sudo yum install mongodb-org
+	```
+	</TabItem>
+</Tabs>
+
+**See: [MongoDB Configuration](./configuration)**

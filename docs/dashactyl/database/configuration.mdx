@@ -1,0 +1,85 @@
+# Configuration
+
+## MongoDB Root Account
+
+First, you'll want to create a root account for you to manage the MongoDB instance.
+
+:::danger
+**DO NOT USE IT AS YOUR DATABASE USER FOR DASHACTYL!!!**
+:::
+
+```js title="$ mongosh"
+use admin
+
+//Do not use this user as your database user for Dashactyl.
+db.createUser(
+  {
+    user: "root",
+    pwd: "pwd",
+    roles: [ "root" ],
+  }
+)
+```
+
+## Enable Authentication
+
+To make authentication required on login now, you can edit the config file at `/etc/mongod.conf`
+
+### Network settings
+
+Scroll down and find `#network interfaces`
+
+Then, you'll want to replace that whole part with this:
+
+```yml title="/etc/mongod.conf"
+# network interfaces
+net:
+  port: 27017
+  bindIp: 0.0.0.0
+```
+
+### Security settings
+
+To enable authentication, scroll down until you find `#security:`
+
+Then, you will want to replace it with this:
+
+```yml title="/etc/mongod.conf"
+security:
+  authorization: "enabled"
+```
+
+After all of that, you'll want to restart your MongoDB instance.
+
+```bash
+systemctl restart mongod
+```
+
+## Create Dashactyl Account & Database
+
+You will want to go back into `mongosh`, authenticate, and then create a database and user with the following:
+
+```js title="$ mongosh"
+db.auth("root", passwordPrompt())
+
+//create dashactyl database
+use dashactyl
+
+db.createUser(
+  {
+    user: "dashactyl",
+    pwd: "pwd",
+    roles: [ "dbOwner" ],
+  }
+)
+```
+
+## Construct MongoDB URI
+
+:::warning
+Do not include the DB in the URI, you specify the URI and then the database in the config.
+:::
+
+```
+mongodb://[user]:[pass]@[host]:[port]/?authSource=dashactyl
+```
