@@ -1,0 +1,82 @@
+
+# Manual Installation
+
+:::warning
+It is expected that you have basic Linux knowledge before moving ahead.
+:::
+
+:::warning
+Please make sure you have setup both your webserver and database
+
+Guides can be found below:
+- [Database Setup - Ubuntu 22.04/22.04](../database/setup_ubuntu)
+- [Database Setup - RHEL 7/8/9](../database/setup_rhel)
+- [Database Setup - Debian](../database/setup_debian)
+- [Webserver Setup - NGINX](../webserver/nginx)
+- [Webserver Setup - Caddy](../webserver/caddy)
+:::
+
+## Installing NVM
+
+First, we'll want to install NVM (Node Version Manager) to help us install and manage NodeJS versions.
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+source ~/.bashrc
+```
+
+## Installing NodeJS & Yarn
+
+### Installing NodeJS
+
+To install the latest LTS version of NodeJS, you can do the following:
+
+```bash
+nvm install --lts --default --latest-npm
+```
+### Installing Yarn & Dependencies
+
+To install Yarn:
+
+```bash
+npm i -g yarn
+```
+
+You can then install the dependencies for Dashactyl by doing the following:
+
+```bash
+yarn install
+```
+
+## Process Management
+
+We suggest you use a tool called PM2 to keep Dashactyl running constantly.
+
+### Installation
+
+```bash
+npm i -g pm2
+```
+
+### Starting Dashactyl
+
+You can start Dashactyl by doing the following:
+
+```bash
+pm2 start index.js --name dashactyl
+```
+
+### Automatic Startup
+
+If you want Dashactyl to start on your server startup, you can do the following:
+
+```bash
+pm2 startup
+pm2 save
+```
+
+Then Dashactyl should be able to start on server startup.
+
+## Configuration
+
+*See: [Configuration Reference](../configuration_reference)*

@@ -1,0 +1,73 @@
+# Configuration Reference
+
+import Badge from "../../components/Badge";
+
+The config file for Dashactyl is called `webconfig.yml` and is where you can change the behavior of Dashactyl.
+
+## Example
+
+```yaml
+port: 3000
+ssl: false
+secret: <SUPER_SECRET>
+environment: production
+debug: false
+dashboard_url: https://dashboard.example.com
+
+connection_uri: mongodb://127.0.0.1:27017
+database: dashactyl
+```
+
+## Options
+
+`port` <Badge type="danger">Required</Badge>
+
+Server port that Dashactyl will listen on.
+
+<hr />
+
+`ssl` <Badge type="info">Optional</Badge>
+
+Whether your Dashactyl instance is running with SSL.
+
+<hr />
+
+`secret` <Badge type="danger">Required</Badge>
+
+Secret to encrypt login sessions.
+
+<hr />
+
+`dashboard_url` <Badge type="danger">Required</Badge>
+
+Current URL of your dashboard.
+
+<hr />
+
+`connection_uri` <Badge type="danger">Required</Badge>
+
+Connection URI for MongoDB.
+
+*See [MongoDB Connection String Reference](https://www.mongodb.com/docs/manual/reference/connection-string/)*
+
+<hr />
+
+`database` <Badge type="danger">Required</Badge>
+
+Database for MongoDB to connect to.
+
+<hr />
+
+`environment` <Badge type="info">Optional</Badge> <Badge type="warning">Developer</Badge>
+
+Option for setting the current environment for Dashactyl. For Developer Use.
+
+*Values: `"developer"` | `"production"`*
+
+<hr />
+
+`debug` <Badge type="info">Optional</Badge> <Badge type="warning">Developer</Badge>
+
+Option for turning on/off debug mode. For developer Use.
+
+*Values: `true` | `false`*
